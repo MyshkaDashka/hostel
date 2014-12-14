@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.pool_size">10</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</property>
+        <mapping class="by.bsuir.hostel.model.Administration" />
+        <mapping class="by.bsuir.hostel.model.DD" />
+        <mapping class="by.bsuir.hostel.model.Duty" />
+        <mapping class="by.bsuir.hostel.model.Educator" />
+        <mapping class="by.bsuir.hostel.model.Email" />
+        <mapping class="by.bsuir.hostel.model.Event" />
+        <mapping class="by.bsuir.hostel.model.Hostels" />
+        <mapping class="by.bsuir.hostel.model.MobilePhones" />
+        <mapping class="by.bsuir.hostel.model.Oxch" />
+        <mapping class="by.bsuir.hostel.model.PersonalType" />
+        <mapping class="by.bsuir.hostel.model.Room" />
+        <mapping class="by.bsuir.hostel.model.RoomType" />
+        <mapping class="by.bsuir.hostel.model.Student" />
+        <mapping class="by.bsuir.hostel.model.StudentCouncil" />
+        <mapping class="by.bsuir.hostel.model.StudentRoom" />
+        <mapping class="by.bsuir.hostel.model.StudentType" />
+    </session-factory>
+</hibernate-configuration>
