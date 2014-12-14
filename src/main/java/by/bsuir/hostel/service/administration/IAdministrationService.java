@@ -10,5 +10,6 @@ import java.util.List;
 public interface IAdministrationService {
 
     public List<Administration> administrationList();
+    public List<Administration> administrationListOne(Integer number);
 
 }

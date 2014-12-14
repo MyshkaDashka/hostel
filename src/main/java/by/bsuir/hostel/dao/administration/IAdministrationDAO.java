@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface IAdministrationDAO {
     public List<Administration> getAdministrations();
+    public List<Administration> getAdministrationsOne(Integer number);
 }

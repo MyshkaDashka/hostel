@@ -2,8 +2,10 @@ package by.bsuir.hostel.controllers;
 
 import by.bsuir.hostel.model.Administration;
 import by.bsuir.hostel.model.Hostels;
+import by.bsuir.hostel.model.Informations;
 import by.bsuir.hostel.service.administration.IAdministrationService;
 import by.bsuir.hostel.service.hostel.IHostelService;
+import by.bsuir.hostel.service.information.IInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -22,6 +24,9 @@ public class Controller {
     @Autowired
     private IHostelService hostelService;
 
+    @Autowired
+    private IInformationService informationService;
+
     @RequestMapping("/")
     public String home() {
         return "redirect:/home";
@@ -30,9 +35,14 @@ public class Controller {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home(ModelMap model) {
-        List<Administration> administrationList = administrationService.administrationList();
-       // model.addAttribute("message", "hi");
-       model.addAttribute("admList", administrationList);
+        List<Administration> administrationList = administrationService.administrationListOne(1);
+        model.addAttribute("director", administrationList);
+        administrationList = administrationService.administrationListOne(2);
+        model.addAttribute("secretary", administrationList);
+        List<Informations> informationsList1 = informationService.informationsListOne(1);
+        model.addAttribute("infOne", informationsList1);
+        List<Informations> informationsList2 = informationService.informationsListOne(2);
+        model.addAttribute("infTwo", informationsList2);
         return "home";
     }
 
@@ -51,6 +61,23 @@ public class Controller {
 
     @RequestMapping(value = "/contacts", method = RequestMethod.GET)
     public String contact(Model model) {
+        List<Informations> informationsList3 = informationService.informationsListOne(3);
+        model.addAttribute("infTree", informationsList3);
+        List<Hostels> hostelsList = hostelService.hostelOne(1);
+        for (Hostels hostels: hostelsList){
+            model.addAttribute("street",hostels.getStreet());
+            model.addAttribute("house", hostels.getHouse());
+        };
+        List<Administration> administrationList = administrationService.administrationListOne(1);
+        for (Administration administration : administrationList) {
+            model.addAttribute("dirPhone", administration.getPhone());
+        };
+        administrationList = administrationService.administrationListOne(2);
+        for (Administration administration : administrationList) {
+            model.addAttribute("secPhone", administration.getPhone());
+        };
+
+
         return "contacts";
     }
 

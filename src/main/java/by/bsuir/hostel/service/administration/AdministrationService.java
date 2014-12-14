@@ -25,5 +25,11 @@ public class AdministrationService implements IAdministrationService {
         return administrationDAO.getAdministrations();
     }
 
+    @Transactional
+    public List<Administration> administrationListOne(Integer number){
+        return administrationDAO.getAdministrationsOne(number);
+    }
+
+
 
 }

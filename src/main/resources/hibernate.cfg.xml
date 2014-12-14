@@ -25,5 +25,6 @@
         <mapping class="by.bsuir.hostel.model.StudentCouncil" />
         <mapping class="by.bsuir.hostel.model.StudentRoom" />
         <mapping class="by.bsuir.hostel.model.StudentType" />
+        <mapping class="by.bsuir.hostel.model.Informations" />
     </session-factory>
 </hibernate-configuration>
