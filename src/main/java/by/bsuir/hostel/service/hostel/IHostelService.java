@@ -10,4 +10,5 @@ import java.util.List;
 public interface IHostelService {
 
     public List<Hostels> hostelsList();
+    public List<Hostels> hostelOne(Integer number);
 }

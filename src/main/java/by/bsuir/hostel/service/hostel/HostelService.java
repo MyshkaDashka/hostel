@@ -25,5 +25,10 @@ public class HostelService implements IHostelService {
         return hostelDAO.getHostels();
     }
 
+    @Transactional
+    public List<Hostels> hostelOne(Integer number){
+        return  hostelDAO.getHostelOne(number);
+    }
+
 
 }

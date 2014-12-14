@@ -27,9 +27,6 @@ h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-si
 #sidebarOne {width:780px; margin:0 auto; background-color:#0b0e10; }
 #sidebar_topOne { width:700px; height:500px; background:url(images/hostel1.jpg) no-repeat;}
 #sidebar_bottomOne {background:url(images/footer_bckg.jpg) no-repeat top center; height:102px; clear:both; width:780px; margin:0 auto; }
-#sidebar_topTwo { width:700px; height:500px; background:url(images/hostel2.jpg) no-repeat; }
-#sidebar_topTree { width:700px; height:500px; background:url(images/hostel2.jpg) no-repeat; }
-#sidebar_topFour { width:700px; height:500px; background:url(images/hostel2.jpg) no-repeat; }
 #sidebarOne h2 { font-size:15px; text-transform:uppercase; color:#FFD700; margin:20px 0 0 0; padding:0; background:none;}
 
 #footer {background:url(images/footer_bckg.jpg) no-repeat top center; height:102px; clear:both; width:780px; margin:0 auto; }
@@ -149,7 +146,7 @@ a:hover { text-decoration:none;}
 
 #sidebar_top { width:227px; height:40px; background:url(images/sidebar_top.jpg) no-repeat;}
 #sidebar_text { padding: 0 30px;}
-#sidebar_text p { margin:5px 0 5px 0;}
+#sidebar_text p { margin:5px 0 5px 0; }
 #sidebar_bottom { width:227px; height:57px; background:url(images/sidebar_bottom.jpg) no-repeat;}
 #sidebar h2 { font-size:13px; text-transform:uppercase; color:#fff; margin:20px 0 0 0; padding:0; background:none;}
 h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-size:24px; color:#fff; background:url(images/h1_bckg.jpg) no-repeat;}

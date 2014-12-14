@@ -20,6 +20,16 @@ public class Hostels {
     private String house;
     @Column
     private Integer countStudent;
+    @Column
+    private String comments;
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
 
     public Integer getId() {
         return id;

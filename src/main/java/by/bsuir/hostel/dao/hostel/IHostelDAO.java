@@ -8,6 +8,6 @@ import java.util.List;
  * Created by Dashka on 12.12.2014.
  */
 public interface IHostelDAO {
-
+    public  List<Hostels>getHostelOne(Integer number);
     public List<Hostels> getHostels();
 }

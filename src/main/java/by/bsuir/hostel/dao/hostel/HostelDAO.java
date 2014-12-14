@@ -23,6 +23,10 @@ public class HostelDAO implements IHostelDAO {
         return sessionFactory.getCurrentSession().createQuery("from Hostels").list();
     }
 
+    @SuppressWarnings("JpaQlInspection")
+    public  List<Hostels>getHostelOne(Integer number){
+        return  sessionFactory.getCurrentSession().createQuery("from Hostels where id = '"+number+"'").list();
+    }
 
 
 }
