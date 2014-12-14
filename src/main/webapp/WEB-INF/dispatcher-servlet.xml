@@ -9,6 +9,11 @@
 
 
     <mvc:resources mapping="/**" location="/" />
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
     <mvc:annotation-driven />
 
 </beans>

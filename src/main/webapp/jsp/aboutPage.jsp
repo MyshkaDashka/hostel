@@ -11,11 +11,11 @@
     <div id="logo"><a href="#"></a><img src="../images/AllHostels.png" width="359" height="40"></div>
     <div id="menu">
         <ul>
-            <li><a href="../home.jsp">home</a></li>
-            <li><a href="aboutPage.jsp">about us</a></li>
+            <li><a href="home">home</a></li>
+            <li><a href="aboutPage">about us</a></li>
             <li><a href="#">services</a></li>
             <li><a href="#">pricing</a></li>
-            <li><a href="../contacts.jsp">contacts</a></li>
+            <li><a href="contacts">contacts</a></li>
         </ul>
     </div>
 </div>

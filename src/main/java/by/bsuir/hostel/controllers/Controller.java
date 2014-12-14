@@ -26,7 +26,19 @@ public class Controller {
     public String home(Model model) {
         List<Administration> administrationList = administrationService.administrationList();
         model.addAttribute("admList", administrationList);
-        return "home.jsp";
+        return "home";
+    }
+
+    @RequestMapping(value = "/aboutPage", method = RequestMethod.GET)
+    public String about(Model model) {
+
+        return "aboutPage";
+    }
+
+    @RequestMapping(value = "/contacts", method = RequestMethod.GET)
+    public String contact(Model model) {
+
+        return "contacts";
     }
 
 
