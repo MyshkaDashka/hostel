@@ -21,4 +21,8 @@ public class StudentDAO implements IStudentDAO{
     public List<Student> getAllStudent() {
         return sessionFactory.getCurrentSession().createQuery("from Student").list() ;
     }
+    @SuppressWarnings("JpaQlInspection")
+    public List<Student> getAllStudentByType(Integer id_t) {
+        return sessionFactory.getCurrentSession().createQuery("from Student where id_type = '" + id_t + "'").list() ;
+    }
 }

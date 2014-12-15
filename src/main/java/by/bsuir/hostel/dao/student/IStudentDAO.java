@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface IStudentDAO {
     public List<Student> getAllStudent();
+    public List<Student> getAllStudentByType(Integer id_t);
 }

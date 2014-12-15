@@ -14,7 +14,7 @@ a:hover { text-decoration:none;}
 
 #text { width:520px;}
 #text p { margin:7px 0 7px 0;}
-#text li {background:url(images/li.gif) no-repeat 0px 7px;}
+/*#text li {background:url(images/li.gif) no-repeat 0px 7px;}*/
 #sidebar {float:right; width:227px; background-color:#0b0e10; margin:10px 10px 0 0; }
 
 #sidebar_top { width:227px; height:40px; background:url(images/sidebar_top.jpg) no-repeat;}
@@ -141,7 +141,7 @@ a:hover { text-decoration:none;}
 
 #text { width:520px;}
 #text p { margin:7px 0 7px 0;}
-#text li {background:url(images/li.gif) no-repeat 0px 7px;}
+/*#text li {background:url(images/li.gif) no-repeat 0px 7px;}*/
 #sidebar {float:right; width:227px; background-color:#0b0e10; margin:10px 10px 0 0; }
 
 #sidebar_top { width:227px; height:40px; background:url(images/sidebar_top.jpg) no-repeat;}
@@ -152,13 +152,11 @@ a:hover { text-decoration:none;}
 h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-size:24px; color:#fff; background:url(images/h1_bckg.jpg) no-repeat;}
 
 #sidebarOne {width:780px; margin:0 auto; background-color:#0b0e10; }
-#sidebar_topOne { width:700px; height:500px; background:url(images/hostel1.jpg) no-repeat;}
-#sidebar_bottomOne {background:url(images/footer_bckg.jpg) no-repeat top center; height:102px; clear:both; width:780px; margin:0 auto; }
-#sidebar_topTwo { width:700px; height:500px; background:url(images/hostel2.jpg) no-repeat; }
-#sidebar_topTree { width:700px; height:500px; background:url(images/hostel2.jpg) no-repeat; }
-#sidebar_topFour { width:700px; height:500px; background:url(images/hostel2.jpg) no-repeat; }
-#sidebarOne h2 { font-size:15px; text-transform:uppercase; color:#FFD700; margin:20px 0 0 0; padding:0; background:none;}
 
+#sidebar_bottomOne {background:url(images/footer_bckg.jpg) no-repeat top center; height:102px; clear:both; width:780px; margin:0 auto; }
+
+#sidebarOne h2 { font-size:15px; text-transform:uppercase; color:#FFD700; margin:20px 0 0 0; padding:0; background:none;}
+h3 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-size:24px; color:#fff;}
 #footer {background:url(images/footer_bckg.jpg) no-repeat top center; height:102px; clear:both; width:780px; margin:0 auto; }
 #left_footer { float:left; padding:60px 0 0 30px; color:#fff; font-size:12px;}
 #left_footer a { color:#fff;}
@@ -166,10 +164,6 @@ h1 {margin:30px 0 0 0; padding:5px 0 7px 45px; text-transform:uppercase; font-si
 #right_footer { float:right;  padding:60px 30px 0 0; color:#fff;  font-size:12px; text-align:right;}
 #right_footer a { color:#fff;}
 #right_footer a:hover { text-decoration:none;}
-
-
-
-
 
 
 #contact-form input {

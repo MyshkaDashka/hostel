@@ -10,4 +10,5 @@ import java.util.List;
 public interface IStudentService {
 
     public List<Student> studentList();
+    public List<Student> studentListFind(Integer id_t);
 }

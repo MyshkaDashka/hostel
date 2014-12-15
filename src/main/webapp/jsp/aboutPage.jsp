@@ -16,7 +16,7 @@
         <ul>
             <li><a href="home">Home</a></li>
             <li><a href="aboutPage">Hostels</a></li>
-            <li><a href="#">services</a></li>
+            <li><a href="students">Students</a></li>
             <li><a href="#">pricing</a></li>
             <li><a href="contacts">Contacts</a></li>
         </ul>

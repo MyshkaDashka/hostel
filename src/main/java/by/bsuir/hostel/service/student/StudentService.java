@@ -24,4 +24,11 @@ public class StudentService implements IStudentService {
     public List<Student> studentList(){
         return studentDAO.getAllStudent();
     }
+
+    @Transactional
+    public List<Student> studentListFind(Integer id_t){
+        return studentDAO.getAllStudentByType(id_t);
+    }
+
+
 }

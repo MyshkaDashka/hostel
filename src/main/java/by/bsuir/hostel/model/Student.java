@@ -13,8 +13,9 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
     private  Integer id;
-    @Column
-    private Integer id_type;
+    @ManyToOne
+    @JoinColumn(name = "id_type", referencedColumnName = "id")
+    private StudentType type;
     @Column
     private String lastName;
     @Column
@@ -34,12 +35,12 @@ public class Student {
         this.id = id;
     }
 
-    public Integer getId_type() {
-        return id_type;
+    public StudentType getType() {
+        return type;
     }
 
-    public void setId_type(Integer id_type) {
-        this.id_type = id_type;
+    public void setType(StudentType type) {
+        this.type = type;
     }
 
     public String getLastName() {
