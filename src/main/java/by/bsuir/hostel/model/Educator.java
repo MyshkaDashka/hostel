@@ -25,6 +25,18 @@ public class Educator {
     @Column
     private Integer id_room;
 
+    @ManyToOne
+    @JoinColumn(name = "id_event", referencedColumnName = "id")
+    private Event eventEducator;
+
+    public Event getEventEducator() {
+        return eventEducator;
+    }
+
+    public void setEventEducator(Event eventEducator) {
+        this.eventEducator = eventEducator;
+    }
+
     public Integer getId() {
         return id;
     }

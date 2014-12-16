@@ -17,7 +17,7 @@
             <li><a href="home">Home</a></li>
             <li><a href="aboutPage">Hostels</a></li>
             <li><a href="students">Students</a></li>
-            <li><a href="#">pricing</a></li>
+            <li><a href="event">Events</a></li>
             <li><a href="contacts">Contacts</a></li>
         </ul>
     </div>

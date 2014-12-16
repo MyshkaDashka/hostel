@@ -22,7 +22,7 @@ which means you can use it in any way you want provided you keep the link to the
             <li><a href="home">Home</a></li>
             <li><a href="aboutPage">Hostels</a></li>
             <li><a href="students">Students</a></li>
-            <li><a href="#">pricing</a></li>
+            <li><a href="event">Events</a></li>
             <li><a href="contacts">Contacts</a></li>
         </ul>
     </div>
@@ -54,7 +54,7 @@ which means you can use it in any way you want provided you keep the link to the
         <div class="contact-right">
             <div class="one-half">
                 <big>
-                <h3>Head office</h3>
+                <h3>Hostel 1</h3>
                 <p>Street:
                     <%
                         out.print(request.getAttribute("street"));

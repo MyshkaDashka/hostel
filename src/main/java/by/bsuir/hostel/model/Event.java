@@ -2,6 +2,7 @@ package by.bsuir.hostel.model;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 /**
  * Created by Dashka on 12.12.2014.
@@ -14,13 +15,41 @@ public class Event {
     @Column
     private Integer id;
     @Column
-    private Integer id_student;
-    @Column
-    private Integer id_educator;
-    @Column
     private Date date;
     @Column
     private String name;
+    @Column
+    private String description;
+
+    @OneToMany(mappedBy = "eventEducator")
+    private List<Educator> educatorList;
+
+    @OneToMany(mappedBy = "eventStudent")
+    private List<Student> studentList;
+
+    public List<Educator> getEducatorList() {
+        return educatorList;
+    }
+
+    public void setEducatorList(List<Educator> educatorList) {
+        this.educatorList = educatorList;
+    }
+
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Integer getId() {
         return id;
@@ -28,22 +57,6 @@ public class Event {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getId_student() {
-        return id_student;
-    }
-
-    public void setId_student(Integer id_student) {
-        this.id_student = id_student;
-    }
-
-    public Integer getId_educator() {
-        return id_educator;
-    }
-
-    public void setId_educator(Integer id_educator) {
-        this.id_educator = id_educator;
     }
 
     public Date getDate() {

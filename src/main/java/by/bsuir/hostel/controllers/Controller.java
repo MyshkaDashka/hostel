@@ -1,10 +1,8 @@
 package by.bsuir.hostel.controllers;
 
-import by.bsuir.hostel.model.Administration;
-import by.bsuir.hostel.model.Hostels;
-import by.bsuir.hostel.model.Informations;
-import by.bsuir.hostel.model.Student;
+import by.bsuir.hostel.model.*;
 import by.bsuir.hostel.service.administration.IAdministrationService;
+import by.bsuir.hostel.service.event.IEventService;
 import by.bsuir.hostel.service.hostel.IHostelService;
 import by.bsuir.hostel.service.information.IInformationService;
 import by.bsuir.hostel.service.student.IStudentService;
@@ -33,6 +31,9 @@ public class Controller {
 
     @Autowired
     private IStudentService studentService;
+
+    @Autowired
+    private IEventService eventService;
 
     @RequestMapping("/")
     public String home() {
@@ -91,32 +92,42 @@ public class Controller {
 
     @RequestMapping(value = "/students", method = RequestMethod.GET)
     public String studentsView(Model model) {
-        List<Student> studentList= studentService.studentList();
+        List<Student> studentList = studentService.studentList();
         model.addAttribute("students", studentList);
         return "students";
     }
 
     @RequestMapping("/studentsf/{id}")
-     public String studentsByType(@PathVariable("id") Integer idType, Model model){
+    public String studentsByType(@PathVariable("id") Integer idType, Model model) {
         List<Student> studentList = studentService.studentListFind(idType);
         model.addAttribute("students", studentList);
         return "students";
     }
+
     @RequestMapping("/studentsf/students")
-    public String students1(){
+    public String students1() {
         return "redirect:/students";
     }
+
     @RequestMapping("/studentsf/home")
-    public String students2(){
+    public String students2() {
         return "redirect:/home";
     }
+
     @RequestMapping("/studentsf/aboutPage")
-     public String students3(){
+    public String students3() {
         return "redirect:/aboutPage";
     }
+
     @RequestMapping("/studentsf/contacts")
-    public String students4(){
+    public String students4() {
         return "redirect:/contacts";
     }
 
+    @RequestMapping(value = "event")
+    public String event(Model model) {
+        List <Event> eventList = eventService.eventList();
+        model.addAttribute("eventList", eventList);
+        return "event";
+    }
 }

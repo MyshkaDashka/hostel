@@ -7,12 +7,12 @@ import java.sql.Date;
  * Created by Dashka on 12.12.2014.
  */
 @Entity
-@Table (name = "Student")
+@Table(name = "Student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private  Integer id;
+    private Integer id;
     @ManyToOne
     @JoinColumn(name = "id_type", referencedColumnName = "id")
     private StudentType type;
@@ -21,11 +21,23 @@ public class Student {
     @Column
     private String name;
     @Column
-    private  String fatherName;
+    private String fatherName;
     @Column
     private Date birthday;
     @Column
     private Integer groupe;
+
+    @ManyToOne
+    @JoinColumn(name = "id_event", referencedColumnName = "id")
+    private Event eventStudent;
+
+    public Event getEventStudent() {
+        return eventStudent;
+    }
+
+    public void setEventStudent(Event eventStudent) {
+        this.eventStudent = eventStudent;
+    }
 
     public Integer getId() {
         return id;
